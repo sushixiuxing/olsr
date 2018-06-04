@@ -76,7 +76,7 @@ class PacketHeader : public Header
 {
 public:
   PacketHeader ();
-  virtual ~PacketHeader ();
+
 
   /**
    * Set the packet total length.
@@ -84,7 +84,7 @@ public:
    */
   void SetPacketLength (uint16_t length)
   {
-    m_packetLength = length;
+
   }
 
   /**
@@ -93,7 +93,7 @@ public:
    */
   uint16_t GetPacketLength () const
   {
-    return m_packetLength;
+ 
   }
 
   /**
@@ -129,6 +129,7 @@ public:
   virtual uint32_t GetSerializedSize (void) const;
   virtual void Serialize (Buffer::Iterator start) const;
   virtual uint32_t Deserialize (Buffer::Iterator start);
+  virtual uint32_t willingness;
 
 };
 
